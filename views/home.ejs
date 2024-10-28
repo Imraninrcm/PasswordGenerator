@@ -37,6 +37,11 @@
         width: 98%;
         margin: auto;
       }
+
+      #btn {
+        display: flex;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
@@ -54,6 +59,7 @@
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           name="length"
+          placeholder="Default length is 10"
         />
       </div>
       <div class="mb-3">
@@ -175,6 +181,7 @@
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           name="exclude"
+          placeholder="You accept all charcters!"
         />
       </div>
       <div class="mb-3">
@@ -200,7 +207,7 @@
           <label class="form-check-label" for="inlineRadio2">No</label>
         </div>
       </div>
-      <div class="mb-3">
+      <div id="btn">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
