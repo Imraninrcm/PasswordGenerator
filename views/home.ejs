@@ -5,44 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Password Generator</title>
     <%- include("./header.ejs") %>
-    <style>
-      body {
-        background-color: azure;
-      }
-      * {
-        font-family: Georgia, "Times New Roman", Times, serif;
-      }
-
-      .title {
-        color: #a5b68d;
-        text-align: center;
-        font-size: 40px;
-        text-decoration: 3px underline #ecdfcc;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-      }
-
-      form {
-        width: 75%;
-        margin: auto;
-        border-style: outset;
-        background-color: #fcfaee;
-      }
-      .mb-3 {
-        width: 98%;
-        margin: auto;
-      }
-
-      #btn {
-        display: flex;
-        justify-content: center;
-      }
-    </style>
   </head>
   <body>
     <h3 class="title">
       Generate Any <b>Random Password</b> with (Customize settings)
     </h3>
-    <form method="post" action="/password" class="needs-validation" novalidate>
+    <form
+      method="post"
+      action="/password"
+      class="needs-validation"
+      novalidate
+      id="details"
+    >
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label"
           ><h5>Enter Length of password</h5></label

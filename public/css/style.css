@@ -1,0 +1,77 @@
+body {
+  background-color: azure;
+}
+
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#ansPage {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.card {
+  margin: auto;
+  margin-top: 3%;
+  width: 75%;
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-style: outset;
+  text-align: center;
+}
+
+.copy-icon {
+  cursor: pointer;
+  color: #63e6be;
+}
+
+.btn-primary a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#passwordBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+#Regenerate {
+  display: flex;
+  justify-content: center;
+}
+
+.alert-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1050;
+}
+
+.title {
+  color: #a5b68d;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: 3px underline #ecdfcc;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#details {
+  width: 75%;
+  margin: auto;
+  border-style: outset;
+  background-color: #fcfaee;
+}
+.mb-3 {
+  width: 98%;
+  margin: auto;
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+}
