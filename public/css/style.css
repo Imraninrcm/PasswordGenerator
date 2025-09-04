@@ -1,9 +1,14 @@
-body {
-  background-color: azure;
-}
-
 * {
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0eafc 0%, #fff2e0 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #ansPage {
@@ -43,6 +48,7 @@ body {
 #Regenerate {
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 
 .alert-container {
@@ -52,19 +58,10 @@ body {
   z-index: 1050;
 }
 
-.title {
-  color: #a5b68d;
-  text-align: center;
-  font-size: 40px;
-  text-decoration: 3px underline #ecdfcc;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
 #details {
-  width: 75%;
+  width: 100%;
   margin: auto;
-  border-style: outset;
-  background-color: #fcfaee;
+  background: transparent;
 }
 .mb-3 {
   width: 98%;
@@ -74,4 +71,77 @@ body {
 #btn {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    padding: 1rem;
+    max-width: 98vw;
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-card {
+    padding: 0.5rem;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+}
+
+.title {
+  color: #c0c9ee;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 8px #b8c6db;
+  -webkit-text-stroke: 2px #849cff;
+}
+
+.main-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(76, 110, 245, 0.15);
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.form-label h5,
+.mb-3 h5 {
+  color: #a2aadb;
+  font-weight: 600;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #b8c6db;
+  box-shadow: 0 2px 8px rgba(76, 110, 245, 0.07);
+}
+
+.form-check-input:checked {
+  background-color: #898ac4;
+  border-color: #a2aadb;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #4e54c8 0%, #63e6be 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(76, 110, 245, 0.15);
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #63e6be 0%, #4e54c8 100%);
 }
