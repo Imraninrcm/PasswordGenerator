@@ -73,6 +73,14 @@ body {
   justify-content: center;
 }
 
+#password-text {
+  overflow-x: auto;
+  word-break: break-all;
+  white-space: pre-wrap;
+  max-width: 100%;
+  min-height: 2.5rem;
+}
+
 @media (max-width: 768px) {
   .main-card {
     padding: 1rem;
