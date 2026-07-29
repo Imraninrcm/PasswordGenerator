@@ -32,10 +32,10 @@
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               name="pw[length]"
-              placeholder="For example 12"
               required
               min="6"
               max="100"
+              value="8"
             />
             <div class="invalid-feedback">
               Please enter a value between 6 and 100.
@@ -49,6 +49,7 @@
                 type="radio"
                 name="pw[numbers]"
                 id="numbersYes"
+                checked
                 value="true"
               />
               <label class="form-check-label" for="numbersYes">Yes</label>
@@ -59,20 +60,20 @@
                 type="radio"
                 name="pw[numbers]"
                 id="numbersNo"
-                checked
                 value="false"
               />
               <label class="form-check-label" for="numbersNo">No</label>
             </div>
           </div>
           <div class="mb-3">
-            <h5>Include Symbols (e.g. !, @, #)?</h5>
+            <h5>Include Symbols (e.g-> !, @, #)?</h5>
             <div class="form-check form-check-inline form-switch">
               <input
                 class="form-check-input"
                 type="radio"
                 name="pw[symbols]"
                 id="symbolsYes"
+                checked
                 value="true"
               />
               <label class="form-check-label" for="symbolsYes">Yes</label>
@@ -83,7 +84,6 @@
                 type="radio"
                 name="pw[symbols]"
                 id="symbolsNo"
-                checked
                 value="false"
               />
               <label class="form-check-label" for="symbolsNo">No</label>
@@ -97,8 +97,8 @@
                 type="radio"
                 name="pw[lowercase]"
                 id="lowercaseYes"
-                checked
                 value="true"
+                checked
               />
               <label class="form-check-label" for="lowercaseYes">Yes</label>
             </div>
@@ -165,7 +165,7 @@
           </div>
           <div class="mb-3">
             <label for="excludeChars" class="form-label">
-              <h5>Characters to Exclude (Optional)</h5>
+              <h5>Characters not Include in password (Optional)</h5>
             </label>
             <input
               type="text"
