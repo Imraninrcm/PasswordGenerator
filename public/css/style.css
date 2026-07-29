@@ -1,96 +1,209 @@
+/* ===========================
+   Google Font (Optional)
+=========================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 * {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
+/* ===========================
+   Body
+=========================== */
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #071128 0%, #0b1220 100%);
-  color: #e6eef8;
+  background: linear-gradient(135deg, #eef4ff 0%, #ffffff 100%);
+  color: #222;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#ansPage {
-  text-align: center;
-  text-decoration: underline;
-  color: #d7e7ff;
+/* Decorative background circles */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(90px);
 }
 
-.card {
-  margin: auto;
-  margin-top: 3%;
-  width: 75%;
+body::before {
+  background: #8ec5fc;
+  top: -120px;
+  left: -120px;
 }
 
-.card-text {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-style: outset;
+body::after {
+  background: #d7b8ff;
+  bottom: -120px;
+  right: -120px;
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.title {
   text-align: center;
-  color: #e6eef8;
+  margin-bottom: 25px;
+  color: #1f2937;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.title span {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.main-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 35px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.08),
+    0 5px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* ===========================
+   Labels
+=========================== */
+
+h5 {
+  color: #374151;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+label {
+  color: #374151;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.form-control {
+  border-radius: 14px;
+  border: 1px solid #d6d9e0;
+  background: #fff;
+  color: #111827;
+  padding: 12px 15px;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #5b8def;
+  box-shadow: 0 0 0 0.25rem rgba(91, 141, 239, 0.18);
+}
+
+::placeholder {
+  color: #9ca3af;
+}
+
+/* ===========================
+   Radio Buttons
+=========================== */
+
+.form-check {
+  margin-right: 18px;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #4f8cff;
+  border-color: #4f8cff;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn-primary {
+  background: linear-gradient(135deg, #5b8def, #6f6df4);
+  border: none;
+  border-radius: 14px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(91, 141, 239, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #4a7ee6, #5d5be6);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* ===========================
+   Password Box
+=========================== */
+
+#password-text {
+  background: #f8faff;
+  border: 1px solid #d7e2f7;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px;
+  color: #2563eb;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 
 .copy-icon {
-  cursor: pointer;
-  color: #7ee3c9;
+  color: white;
 }
 
-.btn-primary a {
-  color: #fff;
+/* ===========================
+   Links
+=========================== */
+
+a {
   text-decoration: none;
 }
 
-#passwordBox {
-  display: flex;
-  justify-content: space-between;
+/* ===========================
+   Validation
+=========================== */
+
+.invalid-feedback {
+  font-size: 0.9rem;
 }
 
-#Regenerate {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
-
-.alert-container {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1050;
-}
-
-#details {
-  width: 100%;
-  margin: auto;
-  background: transparent;
-}
-
-.mb-3 {
-  width: 98%;
-  margin: auto;
-}
-
-#btn {
-  display: flex;
-  justify-content: center;
-}
-
-#password-text {
-  overflow-x: auto;
-  word-break: break-all;
-  white-space: pre-wrap;
-  max-width: 100%;
-  min-height: 2.5rem;
-  color: #e6eef8;
-}
+/* ===========================
+   Responsive
+=========================== */
 
 @media (max-width: 768px) {
   .main-card {
-    padding: 1rem;
-    max-width: 98vw;
+    padding: 25px;
   }
+
   .title {
     font-size: 2rem;
   }
@@ -98,80 +211,14 @@ body {
 
 @media (max-width: 480px) {
   .main-card {
-    padding: 0.5rem;
+    padding: 18px;
   }
+
   .title {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
-}
 
-.title {
-  color: #cfe8ff;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
-}
-
-.main-card {
-  background: linear-gradient(180deg, #071428 0%, #0b1624 100%);
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  box-shadow: 0 8px 32px 0 rgba(2, 6, 23, 0.7);
-  padding: 2rem 2.5rem;
-  margin-top: 2rem;
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 2rem;
-}
-
-.form-label h5,
-.mb-3 h5 {
-  color: #9fb6d9;
-  font-weight: 600;
-}
-
-.form-control {
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(255, 255, 255, 0.02);
-  color: #e6eef8;
-  box-shadow: 0 2px 8px rgba(2, 6, 23, 0.6);
-}
-
-.form-check-input:checked {
-  background-color: #6d7ee6;
-  border-color: #9fb6d9;
-}
-
-.btn-primary {
-  background: linear-gradient(90deg, #3450c8 0%, #4e8fb3 100%);
-  border: none;
-  border-radius: 10px;
-  padding: 0.5rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  box-shadow: 0 2px 10px rgba(2, 6, 23, 0.6);
-  transition:
-    background 0.3s,
-    transform 0.06s;
-}
-
-.btn-primary:hover {
-  transform: translateY(-1px);
-}
-
-.alert-container .alert {
-  background: rgba(255, 255, 255, 0.04);
-  color: #e6eef8;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-/* keep small readable accents */
-.copy-icon {
-  color: #7ee3c9;
+  .btn-primary {
+    width: 100%;
+  }
 }
